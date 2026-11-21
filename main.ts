@@ -1,9 +1,11 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// One-line joke about working beside AI coding agents: the agent "fixes"
-// the crash by removing the thing that crashed. 92 chars, no trailing newline.
-const JOKE =
-  "Our AI agent fixed the demo crash live: it deleted the button. No button, no crash, no demo.";
+// Demo-day debugging, agent edition: when the button keeps crashing the
+// show, the quickest patch is a show with nowhere left to click.
+const setup = "Our AI agent fixed the demo crash live:";
+const middle = "it deleted the button.";
+const punch = "No button, no crash, no demo.";
+const joke = [setup, middle, punch].join(" ");
 
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", JOKE, "utf8");
+writeFileSync("/output/entry.txt", joke, "utf8");
